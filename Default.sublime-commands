@@ -1,22 +1,26 @@
 [
     {
-        "caption": "Move Tab: To the left",
-        "command": "move_tab",
-        "args": { "position": "-1" }
+        "caption": "Move View: To The Left",
+        "command": "move_to_neighboring_index",
+        "args": { "forward": false }
     },
     {
-        "caption": "Move Tab: To the right",
-        "command": "move_tab",
-        "args": { "position": "+1" }
+        "caption": "Move View: To The Right",
+        "command": "move_to_neighboring_index"
+    },
+
+    {
+        "caption": "Move View: To Position…",
+        "command": "move_to_index",
     },
     {
-        "caption": "Move Tab: To first position",
-        "command": "move_tab",
-        "args": { "position": "0" }
+        "caption": "Move View: To First Position",
+        "command": "move_to_index",
+        "args": { "index": 0 }
     },
     {
-        "caption": "Move Tab: To last position",
-        "command": "move_tab",
-        "args": { "position": "999" }
+        "caption": "Move View: To Last Position",
+        "command": "move_to_index",
+        "args": { "index": -1 }
     }
 ]

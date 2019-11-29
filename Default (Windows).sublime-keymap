@@ -1,23 +1,6 @@
 [
-	// Uncomment to enable.
-	// {
-	// 	"keys": ["ctrl+shift+end"],
-	// 	"command": "move_tab",
-	// 	"args": { "position": "999" }
-	// },
-	// {
-	// 	"keys": ["ctrl+shift+home"],
-	// 	"command": "move_tab",
-	// 	"args": { "position": "0" }
-	// },
-	{
-		"keys": ["ctrl+shift+pageup"],
-		"command": "move_tab",
-		"args": { "position": "-1" }
-	},
-	{
-		"keys": ["ctrl+shift+pagedown"],
-		"command": "move_tab",
-		"args": { "position": "+1" }
-	}
+	// { "keys": ["ctrl+shift+end"], "command": "move_to_index", "args": { "index": -1 } },
+	// { "keys": ["ctrl+shift+home"], "command": "move_to_index",  "args": { "index": 0 } },
+	{ "keys": ["ctrl+shift+pageup"], "command": "move_to_neighboring_index", "args": { "forward": false } },
+	{ "keys": ["ctrl+shift+pagedown"], "command": "move_to_neighboring_index" }
 ]

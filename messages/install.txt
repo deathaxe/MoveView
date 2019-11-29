@@ -1,0 +1,18 @@
+Move View
+=========
+
+Usage
+-----
+
+A view can be moved via Command Palette with:
+
+- Move View: To Positon
+- Move View: To The Left
+- Move View: To The Right
+- Move View: To First Position
+- Move View: To Last Position
+
+A view can be moved via keyboard with:
+
+- Linux/Windows: `CTRL + Shift + Page up` and `CTRL + Shift + Page down`
+- MacOS: `Command + Alt + Shift + Left` and `Command + Alt + Shift + Right`
