@@ -49,7 +49,7 @@ class MoveToIndexCommand(sublime_plugin.WindowCommand):
         return None
 
     def input_description(self):
-        return "Move after"
+        return "Move View:"
 
     def run(self, index):
         view, view_group, view_index = active_view_group_index(self.window)
