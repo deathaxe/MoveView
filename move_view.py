@@ -2,10 +2,7 @@ from os.path import basename
 
 import sublime_plugin
 
-__all__ = [
-    'MoveToNeighboringIndexCommand',
-    'MoveToIndexCommand'
-]
+__all__ = ["MoveToNeighboringIndexCommand", "MoveToIndexCommand"]
 
 
 def active_view_group_index(window):
@@ -15,7 +12,6 @@ def active_view_group_index(window):
 
 
 class MoveToNeighboringIndexCommand(sublime_plugin.WindowCommand):
-
     def is_enabled(self, forward=True):
         return len(self.window.views_in_group(self.window.active_group())) > 1
 
@@ -33,7 +29,6 @@ class MoveToNeighboringIndexCommand(sublime_plugin.WindowCommand):
 
 
 class MoveToIndexCommand(sublime_plugin.WindowCommand):
-
     def is_enabled(self, index=None):
         if index is None:
             return True
@@ -44,7 +39,7 @@ class MoveToIndexCommand(sublime_plugin.WindowCommand):
         return num_views > 1 and index < num_views
 
     def input(self, args):
-        if args.get('index') is None:
+        if args.get("index") is None:
             return IndexInputHandler(self.window)
         return None
 
@@ -64,7 +59,6 @@ class MoveToIndexCommand(sublime_plugin.WindowCommand):
 
 
 class IndexInputHandler(sublime_plugin.ListInputHandler):
-
     def __init__(self, window):
         super().__init__()
         self.window = window
@@ -85,7 +79,7 @@ class IndexInputHandler(sublime_plugin.ListInputHandler):
             try:
                 title = basename(v.file_name())
             except TypeError:
-                title = v.name() or 'untitled'
+                title = v.name() or "untitled"
             items.append(("{}\tto position {}".format(title, i + 1), i))
 
         return items
