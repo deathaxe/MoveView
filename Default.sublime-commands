@@ -11,7 +11,7 @@
 
     {
         "caption": "Move View: To Position…",
-        "command": "move_to_index",
+        "command": "move_to_index"
     },
     {
         "caption": "Move View: To First Position",
